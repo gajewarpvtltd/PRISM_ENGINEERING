@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prism Engineering | Tool Room Solutions, Waluj MIDC, Chh. Sambhajinagar</title>
+<meta name="description" content="Prism Engineering offers tool room solutions from raw material to finished product: dies, fixtures, clamping elements, die sets and CNC turned components.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#345948;--green-2:#4a7260;--green-3:#e8eeea;--ink:#1f2a25;--mist:#f3f4f3;--white:#fff;--sans:'Montserrat',system-ui,sans-serif;--serif:'Libre Baskerville',Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.65;font-size:16px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green-2);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:1px solid #dde3df}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 24px;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{height:54px;width:auto}
+.brand b{display:block;font-weight:700;letter-spacing:.42em;line-height:1.2;color:var(--ink);font-size:15px}
+.brand b span{display:block;font-size:17px;letter-spacing:.4em}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:14px;font-weight:600;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--green)}
+.hero{background:linear-gradient(115deg,var(--white) 0 38%,var(--mist) 38% 100%);padding:72px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-family:var(--serif);font-size:clamp(30px,4.6vw,50px);line-height:1.2;color:var(--green);margin-bottom:20px}
+.hero p.lead{max-width:52ch;font-size:17px;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;font-weight:600;font-size:15px;text-decoration:none;background:var(--green);color:var(--white);border:2px solid var(--green)}
+.btn:hover{background:var(--green-2);border-color:var(--green-2)}
+.btn.alt{background:transparent;color:var(--green)}
+.btn.alt:hover{background:var(--green-3)}
+.hero-logo{display:flex;justify-content:center}
+.hero-logo img{width:min(260px,70%);height:auto}
+.panel{background:var(--green);color:var(--white);margin-top:64px;clip-path:polygon(0 0,100% 0,96% 100%,0 100%);padding:44px 0 52px}
+.panel h2{font-weight:400;font-size:20px;margin-bottom:14px;letter-spacing:.02em}
+.panel .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.panel p{font-size:15px}
+section{padding:80px 0}
+h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,36px);color:var(--green);margin-bottom:12px}
+.sub{max-width:60ch;margin-bottom:36px;color:#43524b}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+h3{font-family:var(--serif);font-size:19px;color:var(--green);margin-bottom:12px}
+ul.list{list-style:none}
+ul.list li{padding:10px 0 10px 22px;border-bottom:1px solid #e1e6e3;position:relative}
+ul.list li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:8px;background:var(--green)}
+ul.list ul{list-style:none;margin-top:4px;color:#43524b;font-size:15px}
+.mist{background:var(--mist)}
+table{width:100%;border-collapse:collapse;background:var(--white)}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid #e1e6e3;font-size:15px}
+th{background:var(--green);color:var(--white);font-weight:600}
+.scroll{overflow-x:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.card{background:var(--white);border-top:6px solid var(--green);padding:26px;box-shadow:0 1px 0 #dde3df}
+.card p,.card li{font-size:15px}
+.card ul{margin:10px 0 0 18px}
+.spec{font-size:14px;margin-top:14px;padding-top:12px;border-top:1px solid #e1e6e3;color:#43524b}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.chips span{background:var(--green-3);color:var(--green);font-weight:600;font-size:14px;padding:6px 14px}
+.partner{background:var(--green);color:var(--white)}
+.partner h2.title{color:var(--white)}
+.partner .chips span{background:rgba(255,255,255,.14);color:var(--white)}
+.partner .sub{color:#dbe6e0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact dl dt{font-weight:700;color:var(--green);margin-top:18px}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--green-2)}
+.ids{display:flex;flex-wrap:wrap;gap:12px 40px;background:var(--green);color:var(--white);padding:18px 24px;font-weight:600;font-size:14px;justify-content:space-between}
+footer{position:relative;overflow:hidden;background:var(--ink);color:#c9d3ce;text-align:center;padding:56px 24px 40px}
+footer .wm{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(28px,7vw,76px);font-weight:700;color:rgba(255,255,255,.06);transform:rotate(-6deg);white-space:nowrap;pointer-events:none;user-select:none}
+footer p{position:relative;font-size:14px}
+footer .dev{position:relative;margin-top:10px;font-size:15px;font-weight:600;color:#fff}
+@media (max-width:820px){
+.hero{background:var(--white)}
+.hero-grid,.grid2,.contact-grid,.panel .cols{grid-template-columns:1fr}
+.hero-logo{order:-1;justify-content:flex-start}
+.hero-logo img{width:120px}
+.panel{clip-path:none}
+nav{gap:14px}
+.bar{flex-direction:column;align-items:flex-start}
+section{padding:56px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="#top" aria-label="Prism Engineering home">
+      <img src="logo.png" alt="Prism Engineering logo">
+      <b>PRISM<span>ENGINEERING</span></b>
+    </a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#facility">Facility</a>
+      <a href="#products">Products</a>
+      <a href="#partner">Noble Steels</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Tool room solutions, from raw material to finished product.</h1>
+      <p class="lead">Quality, timely delivery and cost effectiveness are the strengths of our engineering work. Dies, fixtures, tool room components and CNC turned parts, made in Waluj MIDC.</p>
+      <div class="btns">
+        <a class="btn" href="#contact">Send a trade enquiry</a>
+        <a class="btn alt" href="#products">See our products</a>
+      </div>
+    </div>
+    <div class="hero-logo"><img src="logo.png" alt="Prism Engineering emblem"></div>
+  </div>
+  <div class="panel" id="about">
+    <div class="wrap">
+      <h2>We at Prism Engineering,</h2>
+      <div class="cols">
+        <p>Offer the best package of solutions for all the tool room needs, from raw material to finished product. Quality and timely delivery and cost effectiveness are USPs of our engineering works.</p>
+        <p>We have now extended our scope to mass production of turned components, with the addition of two brand new CNCs in our fleet.</p>
+        <p>With Noble Steels as our associate partner, we provide a wide range of raw materials covering tool and alloy steels.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="title">Our services</h2>
+    <p class="sub">Happy to serve in standard or customised materials and sizes for every component listed here.</p>
+    <div class="grid2">
+      <div>
+        <h3>Tool room services</h3>
+        <ul class="list">
+          <li>Finished product: dies and fixtures</li>
+          <li>Job work / labour charge work</li>
+          <li>Standard and customised tool room components
+            <ul><li>Strap clamps</li><li>Guide and punch pins, entry stoppers, lifters</li><li>Sleeves</li></ul>
+          </li>
+          <li>CNC turned components (batch / mass quantity)</li>
+        </ul>
+      </div>
+      <div id="facility">
+        <h3>Machining facility</h3>
+        <div class="scroll">
+        <table>
+          <thead><tr><th>Machine</th><th>Size</th></tr></thead>
+          <tbody>
+            <tr><td>Vertical Machining Centre</td><td>800 × 500 mm</td></tr>
+            <tr><td>Universal Milling Machine</td><td>1200 × 600 mm</td></tr>
+            <tr><td>Conventional Milling Machine</td><td>600 × 300 mm</td></tr>
+            <tr><td>Surface Grinding Machine</td><td>600 × 1000 mm</td></tr>
+            <tr><td>Cylindrical Grinding M/c</td><td>As required</td></tr>
+            <tr><td>Lathe Machine</td><td>410 mm OD max</td></tr>
+            <tr><td>DRO Machine</td><td>300 × 800 mm</td></tr>
+            <tr><td>CNC Machine</td><td>165 × 300 b/w centre</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="mist">
+  <div class="wrap">
+    <h2 class="title">Product portfolio</h2>
+    <p class="sub">Standard and customised sizes, in the materials your job needs.</p>
+    <div class="cards">
+      <article class="card">
+        <h3>Clamping elements</h3>
+        <p>Clamping screw jacks and strap clamps.</p>
+        <p class="spec">Material: EN 8D, 28–30 HRc, blackodized</p>
+        <p style="margin-top:12px;font-size:14px">We also make clamping elements to BIS:</p>
+        <ul><li>T bolt</li><li>Stud / flange nut</li><li>Hex nut / strap clamp</li><li>T-nut / extension nut</li><li>Washer / C-washer</li></ul>
+      </article>
+      <article class="card">
+        <h3>Die sets</h3>
+        <p>Center pillar, rear pillar, diagonal pillar and four pillar die sets.</p>
+        <p class="spec">Plate: mild steel<br>Pillar / bush: EN 353<br>Ball cage: brass / aluminium<br>Pillar / bush hardness: 55–58 HRc (hardened)<br>A wide range of materials is available on request.</p>
+      </article>
+      <article class="card">
+        <h3>CNC turned components</h3>
+        <p>Punch pins, guide pins, sleeves and entry stoppers. Custom sizes in batches, minimum batch quantity 50 nos.</p>
+        <p style="margin-top:12px;font-size:14px">Mass production components, automotive and non-automotive:</p>
+        <ul><li>Hot / cold forged components</li><li>Casting components</li><li>Bar route turning</li><li>With material, job work or labour charge</li></ul>
+        <p class="spec">Examples: strainers, shafts</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="partner" class="partner">
+  <div class="wrap">
+    <h2 class="title">Our associate partner: Noble Steels</h2>
+    <p class="sub">A renowned organisation serving for 22 years with a wide range of tool and alloy steels. Accurate profile cutting gives a cutting edge in the raw material sector.</p>
+    <h3 style="color:#fff">Material scope</h3>
+    <div class="chips">
+      <span>MS and C45 plates</span><span>MS bright bars</span><span>D2 grade (Indian and imported)</span><span>WPS grade</span><span>EN 31</span><span>EN 353</span><span>EN 8</span><span>EN 24</span><span>OHNS grade</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="title">For trade enquiry</h2>
+      <p class="sub">Let us know how we can support you.</p>
+      <a class="btn" href="mailto:engineeringindkab@gmail.com?subject=Trade%20enquiry">Email us</a>
+    </div>
+    <dl>
+      <dt>Address</dt>
+      <dd>Plot No. D 52/22, Near Kamgar Chowk,<br>Waluj MIDC, Chh. Sambhajinagar – 431133</dd>
+      <dt>Phone</dt>
+      <dd><a href="tel:+919822842482">9822842482</a>, <a href="tel:+918624083393">8624083393</a></dd>
+      <dt>Email</dt>
+      <dd><a href="mailto:engineeringindkab@gmail.com">engineeringindkab@gmail.com</a></dd>
+    </dl>
+  </div>
+</section>
+</main>
+
+<div class="ids"><span>GST No. 27AADFI4354A1ZS</span><span>MSME No. UDYAM-MH-04-0201426</span></div>
+
+<footer>
+  <div class="wm" aria-hidden="true">Developed by Keystonetech Software Pvt Ltd</div>
+  <p>© <span id="y">2026</span> Prism Engineering. All rights reserved.</p>
+  <p class="dev">Developed by Keystonetech Software Pvt Ltd</p>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
