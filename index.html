@@ -55,7 +55,7 @@ table{width:100%;border-collapse:collapse;background:var(--white)}
 th,td{text-align:left;padding:12px 16px;border-bottom:1px solid #e1e6e3;font-size:15px}
 th{background:var(--green);color:var(--white);font-weight:600}
 .scroll{overflow-x:auto}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .card{background:var(--white);border-top:6px solid var(--green);padding:26px;box-shadow:0 1px 0 #dde3df}
 .card p,.card li{font-size:15px}
 .card ul{margin:10px 0 0 18px}
@@ -85,6 +85,17 @@ nav{gap:14px}
 section{padding:56px 0}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+figure{background:var(--white);border:1px solid #dde3df;margin:0}
+figure img{display:block;width:100%;height:150px;object-fit:contain;background:var(--white);padding:8px}
+figcaption{font-size:13px;font-weight:600;color:var(--green);padding:8px 12px;border-top:1px solid #e1e6e3}
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px}
+.photos.cover figure img{object-fit:cover;padding:0}
+.band{max-width:1100px;margin:48px auto 0;padding:0 24px}
+.band img{display:block;width:100%;height:clamp(200px,38vw,380px);object-fit:cover}
+.sublabel{font-family:var(--serif);color:var(--green);font-size:15px;margin:22px 0 0;font-weight:700}
+.partner figure{border-color:transparent}
+@media (max-width:820px){.band{margin-top:28px}}
 </style>
 </head>
 <body>
@@ -118,6 +129,7 @@ section{padding:56px 0}
     </div>
     <div class="hero-logo"><img src="logo.png" alt="Prism Engineering emblem"></div>
   </div>
+  <div class="band"><img src="images/cnc-machining.jpg" alt="CNC machining a die component with coolant"></div>
   <div class="panel" id="about">
     <div class="wrap">
       <h2>We at Prism Engineering,</h2>
@@ -165,6 +177,7 @@ section{padding:56px 0}
         </div>
       </div>
     </div>
+    <div class="photos cover" style="margin-top:44px"><figure><img src="images/surface-grinding.jpg" alt="Surface grinding" loading="lazy"><figcaption>Surface grinding</figcaption></figure><figure><img src="images/tool-room-components.jpg" alt="Tool room components" loading="lazy"><figcaption>Tool room components</figcaption></figure><figure><img src="images/die-plate-machined.jpg" alt="Machined die plate" loading="lazy"><figcaption>Machined die plate</figcaption></figure><figure><img src="images/perforated-plate.jpg" alt="Perforated plate" loading="lazy"><figcaption>Perforated plate</figcaption></figure></div>
   </div>
 </section>
 
@@ -176,6 +189,7 @@ section{padding:56px 0}
       <article class="card">
         <h3>Clamping elements</h3>
         <p>Clamping screw jacks and strap clamps.</p>
+        <div class="photos" style="grid-template-columns:1fr 1fr;margin:14px 0"><figure><img src="images/clamping-screw-jack.jpg" alt="Screw jack" loading="lazy"><figcaption>Screw jack</figcaption></figure><figure><img src="images/strap-clamp.jpg" alt="Strap clamp" loading="lazy"><figcaption>Strap clamp</figcaption></figure></div>
         <p class="spec">Material: EN 8D, 28–30 HRc, blackodized</p>
         <p style="margin-top:12px;font-size:14px">We also make clamping elements to BIS:</p>
         <ul><li>T bolt</li><li>Stud / flange nut</li><li>Hex nut / strap clamp</li><li>T-nut / extension nut</li><li>Washer / C-washer</li></ul>
@@ -183,11 +197,13 @@ section{padding:56px 0}
       <article class="card">
         <h3>Die sets</h3>
         <p>Center pillar, rear pillar, diagonal pillar and four pillar die sets.</p>
+        <div class="photos" style="grid-template-columns:1fr 1fr;margin:14px 0"><figure><img src="images/die-set-center-pillar.jpg" alt="Center pillar" loading="lazy"><figcaption>Center pillar</figcaption></figure><figure><img src="images/die-set-rear-pillar.jpg" alt="Rear pillar" loading="lazy"><figcaption>Rear pillar</figcaption></figure><figure><img src="images/die-set-diagonal-pillar.jpg" alt="Diagonal pillar" loading="lazy"><figcaption>Diagonal pillar</figcaption></figure><figure><img src="images/die-set-four-pillar.jpg" alt="Four pillar" loading="lazy"><figcaption>Four pillar</figcaption></figure></div>
         <p class="spec">Plate: mild steel<br>Pillar / bush: EN 353<br>Ball cage: brass / aluminium<br>Pillar / bush hardness: 55–58 HRc (hardened)<br>A wide range of materials is available on request.</p>
       </article>
       <article class="card">
         <h3>CNC turned components</h3>
         <p>Punch pins, guide pins, sleeves and entry stoppers. Custom sizes in batches, minimum batch quantity 50 nos.</p>
+        <div class="photos" style="grid-template-columns:1fr 1fr;margin:14px 0"><figure><img src="images/punch-pins.jpg" alt="Punch pins" loading="lazy"><figcaption>Punch pins</figcaption></figure><figure><img src="images/guide-pins.jpg" alt="Guide pins" loading="lazy"><figcaption>Guide pins</figcaption></figure><figure><img src="images/sleeves-entry-stoppers.jpg" alt="Sleeves and entry stoppers" loading="lazy"><figcaption>Sleeves and entry stoppers</figcaption></figure><figure><img src="images/strainer.jpg" alt="Strainer" loading="lazy"><figcaption>Strainer</figcaption></figure><figure><img src="images/shaft.jpg" alt="Shaft" loading="lazy"><figcaption>Shaft</figcaption></figure></div>
         <p style="margin-top:12px;font-size:14px">Mass production components, automotive and non-automotive:</p>
         <ul><li>Hot / cold forged components</li><li>Casting components</li><li>Bar route turning</li><li>With material, job work or labour charge</li></ul>
         <p class="spec">Examples: strainers, shafts</p>
@@ -204,6 +220,7 @@ section{padding:56px 0}
     <div class="chips">
       <span>MS and C45 plates</span><span>MS bright bars</span><span>D2 grade (Indian and imported)</span><span>WPS grade</span><span>EN 31</span><span>EN 353</span><span>EN 8</span><span>EN 24</span><span>OHNS grade</span>
     </div>
+    <div class="photos" style="margin-top:36px"><figure><img src="images/ms-bright-bars.jpg" alt="MS bright bars" loading="lazy"><figcaption>MS bright bars</figcaption></figure><figure><img src="images/steel-plate-stack.jpg" alt="Steel plates" loading="lazy"><figcaption>Steel plates</figcaption></figure><figure><img src="images/steel-plates.jpg" alt="Tool and alloy steel plates" loading="lazy"><figcaption>Tool and alloy steel plates</figcaption></figure></div>
   </div>
 </section>
 
