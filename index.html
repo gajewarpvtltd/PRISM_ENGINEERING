@@ -1,260 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prism Engineering | Tool Room Solutions, Waluj MIDC, Chh. Sambhajinagar</title>
-<meta name="description" content="Prism Engineering offers tool room solutions from raw material to finished product: dies, fixtures, clamping elements, die sets and CNC turned components.">
-<link rel="icon" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{--green:#345948;--green-2:#4a7260;--green-3:#e8eeea;--ink:#1f2a25;--mist:#f3f4f3;--white:#fff;--sans:'Montserrat',system-ui,sans-serif;--serif:'Libre Baskerville',Georgia,serif}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.65;font-size:16px}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--green-2);outline-offset:3px}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-header{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:1px solid #dde3df}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 24px;max-width:1100px;margin:0 auto}
-.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
-.brand img{height:54px;width:auto}
-.brand b{display:block;font-weight:700;letter-spacing:.42em;line-height:1.2;color:var(--ink);font-size:15px}
-.brand b span{display:block;font-size:17px;letter-spacing:.4em}
-nav{display:flex;gap:22px;flex-wrap:wrap}
-nav a{text-decoration:none;font-size:14px;font-weight:600;padding:4px 0;border-bottom:2px solid transparent}
-nav a:hover{border-color:var(--green)}
-.hero{background:linear-gradient(115deg,var(--white) 0 38%,var(--mist) 38% 100%);padding:72px 0 0}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.hero h1{font-family:var(--serif);font-size:clamp(30px,4.6vw,50px);line-height:1.2;color:var(--green);margin-bottom:20px}
-.hero p.lead{max-width:52ch;font-size:17px;margin-bottom:28px}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 26px;font-weight:600;font-size:15px;text-decoration:none;background:var(--green);color:var(--white);border:2px solid var(--green)}
-.btn:hover{background:var(--green-2);border-color:var(--green-2)}
-.btn.alt{background:transparent;color:var(--green)}
-.btn.alt:hover{background:var(--green-3)}
-.hero-logo{display:flex;justify-content:center}
-.hero-logo img{width:min(260px,70%);height:auto}
-.panel{background:var(--green);color:var(--white);margin-top:64px;clip-path:polygon(0 0,100% 0,96% 100%,0 100%);padding:44px 0 52px}
-.panel h2{font-weight:400;font-size:20px;margin-bottom:14px;letter-spacing:.02em}
-.panel .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.panel p{font-size:15px}
-section{padding:80px 0}
-h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,36px);color:var(--green);margin-bottom:12px}
-.sub{max-width:60ch;margin-bottom:36px;color:#43524b}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-h3{font-family:var(--serif);font-size:19px;color:var(--green);margin-bottom:12px}
-ul.list{list-style:none}
-ul.list li{padding:10px 0 10px 22px;border-bottom:1px solid #e1e6e3;position:relative}
-ul.list li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:8px;background:var(--green)}
-ul.list ul{list-style:none;margin-top:4px;color:#43524b;font-size:15px}
-.mist{background:var(--mist)}
-table{width:100%;border-collapse:collapse;background:var(--white)}
-th,td{text-align:left;padding:12px 16px;border-bottom:1px solid #e1e6e3;font-size:15px}
-th{background:var(--green);color:var(--white);font-weight:600}
-.scroll{overflow-x:auto}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
-.card{background:var(--white);border-top:6px solid var(--green);padding:26px;box-shadow:0 1px 0 #dde3df}
-.card p,.card li{font-size:15px}
-.card ul{margin:10px 0 0 18px}
-.spec{font-size:14px;margin-top:14px;padding-top:12px;border-top:1px solid #e1e6e3;color:#43524b}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-.chips span{background:var(--green-3);color:var(--green);font-weight:600;font-size:14px;padding:6px 14px}
-.partner{background:var(--green);color:var(--white)}
-.partner h2.title{color:var(--white)}
-.partner .chips span{background:rgba(255,255,255,.14);color:var(--white)}
-.partner .sub{color:#dbe6e0}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.contact dl dt{font-weight:700;color:var(--green);margin-top:18px}
-.contact dd a{text-decoration:none;border-bottom:1px solid var(--green-2)}
-.ids{display:flex;flex-wrap:wrap;gap:12px 40px;background:var(--green);color:var(--white);padding:18px 24px;font-weight:600;font-size:14px;justify-content:space-between}
-footer{position:relative;overflow:hidden;background:var(--ink);color:#c9d3ce;text-align:center;padding:56px 24px 40px}
-footer .wm{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(28px,7vw,76px);font-weight:700;color:rgba(255,255,255,.06);transform:rotate(-6deg);white-space:nowrap;pointer-events:none;user-select:none}
-footer p{position:relative;font-size:14px}
-footer .dev{position:relative;margin-top:10px;font-size:15px;font-weight:600;color:#fff}
-@media (max-width:820px){
-.hero{background:var(--white)}
-.hero-grid,.grid2,.contact-grid,.panel .cols{grid-template-columns:1fr}
-.hero-logo{order:-1;justify-content:flex-start}
-.hero-logo img{width:120px}
-.panel{clip-path:none}
-nav{gap:14px}
-.bar{flex-direction:column;align-items:flex-start}
-section{padding:56px 0}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keystonetech Software Private Limited | Web Development, Data Engineering & Analytics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0F172A',
+                            accent: '#2563EB',
+                            accentHover: '#1D4ED8',
+                            lightBg: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
 
-figure{background:var(--white);border:1px solid #dde3df;margin:0}
-figure img{display:block;width:100%;height:150px;object-fit:contain;background:var(--white);padding:8px}
-figcaption{font-size:13px;font-weight:600;color:var(--green);padding:8px 12px;border-top:1px solid #e1e6e3}
-.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px}
-.photos.cover figure img{object-fit:cover;padding:0}
-.band{max-width:1100px;margin:48px auto 0;padding:0 24px}
-.band img{display:block;width:100%;height:clamp(200px,38vw,380px);object-fit:cover}
-.sublabel{font-family:var(--serif);color:var(--green);font-size:15px;margin:22px 0 0;font-weight:700}
-.partner figure{border-color:transparent}
-@media (max-width:820px){.band{margin-top:28px}}
-</style>
+        /* ---------- Auto-moving strips (marquee) ---------- */
+        @keyframes scroll-left  { from { transform: translateX(0); } to { transform: translateX(calc(-1 * var(--shift))); } }
+        @keyframes scroll-right { from { transform: translateX(calc(-1 * var(--shift))); } to { transform: translateX(0); } }
+
+        .marquee {
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-left 40s linear infinite; /* real duration is set by the script */
+        }
+        .marquee-track.reverse { animation-name: scroll-right; }
+        /* Pause when a visitor hovers, so they can read a card */
+        .marquee:hover .marquee-track { animation-play-state: paused; }
+
+        /* ============ THEME: change colours here, in one place ============ */
+        :root {
+            --dark-bg:      #0F172A;
+            --dark-heading: #FFFFFF;
+            --dark-body:    #CBD5E1;
+            --dark-muted:   #94A3B8;
+            --dark-card:    #1E293B;
+            --dark-border:  #334155;
+            --dark-badge:   rgba(37, 99, 235, 0.20);
+
+            --light-bg:      #FFFFFF;
+            --light-heading: #0F172A;
+            --light-body:    #475569;
+            --light-muted:   #64748B;
+            --light-card:    #F8FAFC;
+            --light-border:  #E2E8F0;
+            --light-badge:   #EFF6FF;
+        }
+
+        /* 1st, 3rd, 5th... section = dark. 2nd, 4th, 6th... = light.
+           To start with light instead, swap "odd" and "even" below. */
+        main > section:nth-of-type(odd) {
+            --bg: var(--dark-bg); --heading: var(--dark-heading); --body: var(--dark-body);
+            --muted: var(--dark-muted); --card: var(--dark-card); --border: var(--dark-border); --badge: var(--dark-badge);
+        }
+        main > section:nth-of-type(even) {
+            --bg: var(--light-bg); --heading: var(--light-heading); --body: var(--light-body);
+            --muted: var(--light-muted); --card: var(--light-card); --border: var(--light-border); --badge: var(--light-badge);
+        }
+        main > section:nth-of-type(odd),
+        main > section:nth-of-type(even) { background-color: var(--bg); color: var(--body); }
+
+        /* Makes the Tailwind classes you already use follow the section's shade */
+        main > section h1,
+        main > section .text-slate-900,
+        main > section .text-white:not(.bg-brand-accent) { color: var(--heading); }
+        main > section .text-slate-800,
+        main > section .text-slate-700,
+        main > section .text-slate-600,
+        main > section .text-slate-300 { color: var(--body); }
+        main > section .text-slate-500,
+        main > section .text-slate-400 { color: var(--muted); }
+        main > section .bg-white,
+        main > section .bg-brand-lightBg { background-color: var(--card); }
+        main > section .bg-blue-50 { background-color: var(--badge); }
+        main > section .border-slate-200,
+        main > section .border-slate-700 { border-color: var(--border); }
+    </style>
 </head>
-<body>
-<header>
-  <div class="bar">
-    <a class="brand" href="#top" aria-label="Prism Engineering home">
-      <img src="logo.png" alt="Prism Engineering logo">
-      <b>PRISM<span>ENGINEERING</span></b>
-    </a>
-    <nav aria-label="Main">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#facility">Facility</a>
-      <a href="#products">Products</a>
-      <a href="#partner">Noble Steels</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+<body class="bg-white text-slate-800 antialiased">
 
-<main id="top">
-<div class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>Tool room solutions, from raw material to finished product.</h1>
-      <p class="lead">Quality, timely delivery and cost effectiveness are the strengths of our engineering work. Dies, fixtures, tool room components and CNC turned parts, made in Waluj MIDC.</p>
-      <div class="btns">
-        <a class="btn" href="#contact">Send a trade enquiry</a>
-        <a class="btn alt" href="#products">See our products</a>
-      </div>
-    </div>
-    <div class="hero-logo"><img src="logo.png" alt="Prism Engineering emblem"></div>
-  </div>
-  <div class="band"><img src="images/cnc-machining.jpg" alt="CNC machining a die component with coolant"></div>
-  <div class="panel" id="about">
-    <div class="wrap">
-      <h2>We at Prism Engineering,</h2>
-      <div class="cols">
-        <p>Offer the best package of solutions for all the tool room needs, from raw material to finished product. Quality and timely delivery and cost effectiveness are USPs of our engineering works.</p>
-        <p>We have now extended our scope to mass production of turned components, with the addition of two brand new CNCs in our fleet.</p>
-        <p>With Noble Steels as our associate partner, we provide a wide range of raw materials covering tool and alloy steels.</p>
-      </div>
-    </div>
-  </div>
-</div>
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="thektsoftwarelogo.png" alt="keystonetech logo" class="h-10 w-auto">
+                <span class="text-2xl font-bold text-slate-900 tracking-tight">keystonetech<span class="text-brand-accent">.</span></span>
+            </a>
 
-<section id="services">
-  <div class="wrap">
-    <h2 class="title">Our services</h2>
-    <p class="sub">Happy to serve in standard or customised materials and sizes for every component listed here.</p>
-    <div class="grid2">
-      <div>
-        <h3>Tool room services</h3>
-        <ul class="list">
-          <li>Finished product: dies and fixtures</li>
-          <li>Job work / labour charge work</li>
-          <li>Standard and customised tool room components
-            <ul><li>Strap clamps</li><li>Guide and punch pins, entry stoppers, lifters</li><li>Sleeves</li></ul>
-          </li>
-          <li>CNC turned components (batch / mass quantity)</li>
-        </ul>
-      </div>
-      <div id="facility">
-        <h3>Machining facility</h3>
-        <div class="scroll">
-        <table>
-          <thead><tr><th>Machine</th><th>Size</th></tr></thead>
-          <tbody>
-            <tr><td>Vertical Machining Centre</td><td>800 × 500 mm</td></tr>
-            <tr><td>Universal Milling Machine</td><td>1200 × 600 mm</td></tr>
-            <tr><td>Conventional Milling Machine</td><td>600 × 300 mm</td></tr>
-            <tr><td>Surface Grinding Machine</td><td>600 × 1000 mm</td></tr>
-            <tr><td>Cylindrical Grinding M/c</td><td>As required</td></tr>
-            <tr><td>Lathe Machine</td><td>410 mm OD max</td></tr>
-            <tr><td>DRO Machine</td><td>300 × 800 mm</td></tr>
-            <tr><td>CNC Machine</td><td>165 × 300 b/w centre</td></tr>
-          </tbody>
-        </table>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-brand-accent transition">About</a>
+                <a href="#services" class="hover:text-brand-accent transition">Services</a>
+                <a href="#tech" class="hover:text-brand-accent transition">Stack</a>
+                <a href="#clients" class="hover:text-brand-accent transition">Clients</a>
+                <a href="#contact" class="hover:text-brand-accent transition">Contact</a>
+            </nav>
+
+            <a href="#contact" class="hidden md:inline-flex bg-brand-accent text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-brand-accentHover transition shadow-sm">Get in Touch</a>
         </div>
-      </div>
-    </div>
-    <div class="photos cover" style="margin-top:44px"><figure><img src="images/surface-grinding.jpg" alt="Surface grinding" loading="lazy"><figcaption>Surface grinding</figcaption></figure><figure><img src="images/tool-room-components.jpg" alt="Tool room components" loading="lazy"><figcaption>Tool room components</figcaption></figure><figure><img src="images/die-plate-machined.jpg" alt="Machined die plate" loading="lazy"><figcaption>Machined die plate</figcaption></figure><figure><img src="images/perforated-plate.jpg" alt="Perforated plate" loading="lazy"><figcaption>Perforated plate</figcaption></figure></div>
-  </div>
-</section>
+    </header>
 
-<section id="products" class="mist">
-  <div class="wrap">
-    <h2 class="title">Product portfolio</h2>
-    <p class="sub">Standard and customised sizes, in the materials your job needs.</p>
-    <div class="cards">
-      <article class="card">
-        <h3>Clamping elements</h3>
-        <p>Clamping screw jacks and strap clamps.</p>
-        <div class="photos" style="grid-template-columns:1fr 1fr;margin:14px 0"><figure><img src="images/clamping-screw-jack.jpg" alt="Screw jack" loading="lazy"><figcaption>Screw jack</figcaption></figure><figure><img src="images/strap-clamp.jpg" alt="Strap clamp" loading="lazy"><figcaption>Strap clamp</figcaption></figure></div>
-        <p class="spec">Material: EN 8D, 28–30 HRc, blackodized</p>
-        <p style="margin-top:12px;font-size:14px">We also make clamping elements to BIS:</p>
-        <ul><li>T bolt</li><li>Stud / flange nut</li><li>Hex nut / strap clamp</li><li>T-nut / extension nut</li><li>Washer / C-washer</li></ul>
-      </article>
-      <article class="card">
-        <h3>Die sets</h3>
-        <p>Center pillar, rear pillar, diagonal pillar and four pillar die sets.</p>
-        <div class="photos" style="grid-template-columns:1fr 1fr;margin:14px 0"><figure><img src="images/die-set-center-pillar.jpg" alt="Center pillar" loading="lazy"><figcaption>Center pillar</figcaption></figure><figure><img src="images/die-set-rear-pillar.jpg" alt="Rear pillar" loading="lazy"><figcaption>Rear pillar</figcaption></figure><figure><img src="images/die-set-diagonal-pillar.jpg" alt="Diagonal pillar" loading="lazy"><figcaption>Diagonal pillar</figcaption></figure><figure><img src="images/die-set-four-pillar.jpg" alt="Four pillar" loading="lazy"><figcaption>Four pillar</figcaption></figure></div>
-        <p class="spec">Plate: mild steel<br>Pillar / bush: EN 353<br>Ball cage: brass / aluminium<br>Pillar / bush hardness: 55–58 HRc (hardened)<br>A wide range of materials is available on request.</p>
-      </article>
-      <article class="card">
-        <h3>CNC turned components</h3>
-        <p>Punch pins, guide pins, sleeves and entry stoppers. Custom sizes in batches, minimum batch quantity 50 nos.</p>
-        <div class="photos" style="grid-template-columns:1fr 1fr;margin:14px 0"><figure><img src="images/punch-pins.jpg" alt="Punch pins" loading="lazy"><figcaption>Punch pins</figcaption></figure><figure><img src="images/guide-pins.jpg" alt="Guide pins" loading="lazy"><figcaption>Guide pins</figcaption></figure><figure><img src="images/sleeves-entry-stoppers.jpg" alt="Sleeves and entry stoppers" loading="lazy"><figcaption>Sleeves and entry stoppers</figcaption></figure><figure><img src="images/strainer.jpg" alt="Cap Stainer" loading="lazy"><figcaption>Cap Stainer</figcaption></figure><figure><img src="images/shaft.jpg" alt="Shaft" loading="lazy"><figcaption>Shaft</figcaption></figure></div>
-        <p style="margin-top:12px;font-size:14px">Mass production components, automotive and non-automotive:</p>
-        <ul><li>Hot / cold forged components</li><li>Casting components</li><li>Bar route turning</li><li>With material, job work or labour charge</li></ul>
-        <p class="spec">Examples: cap stainers, shafts</p>
-      </article>
-      <article class="card">
-        <h3>Jigs and fixtures</h3>
-        <p>Jigs and fixtures in standard and customised designs.</p>
-        <div class="photos" style="grid-template-columns:1fr 1fr;margin:14px 0"><figure><img src="images/jigs-and-fixtures.jpg" alt="Jigs and fixtures" loading="lazy"><figcaption>Jigs and fixtures</figcaption></figure></div>
-      </article>
-    </div>
-  </div>
-</section>
+    <main>
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 md:pt-48 md:pb-32 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <span class="text-brand-accent text-sm font-semibold tracking-wider uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Enterprise Software Solutions</span>
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight mt-6 leading-tight">Architecting modern web & data intelligence systems.</h1>
+                <p class="text-slate-400 text-lg md:text-xl mt-6 font-light leading-relaxed">
+                    keystonetech Software Private Limited turns complex data architectures into strategic assets and delivers scalable web applications built for business momentum.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-brand-accent text-white px-7 py-3.5 rounded-lg text-base font-medium hover:bg-brand-accentHover text-center transition">Schedule Consultation</a>
+                    <a href="#services" class="border border-slate-700 text-slate-300 px-7 py-3.5 rounded-lg text-base font-medium hover:bg-slate-800 text-center transition">Explore Solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="partner" class="partner">
-  <div class="wrap">
-    <h2 class="title">Our associate partner: Noble Steels</h2>
-    <p class="sub">A renowned organisation serving for 22 years with a wide range of tool and alloy steels. Accurate profile cutting gives a cutting edge in the raw material sector.</p>
-    <h3 style="color:#fff">Material scope</h3>
-    <div class="chips">
-      <span>MS and C45 plates</span><span>MS bright bars</span><span>D2 grade (Indian and imported)</span><span>WPS grade</span><span>EN 31</span><span>EN 353</span><span>EN 8</span><span>EN 24</span><span>OHNS grade</span>
-    </div>
-    <div class="photos" style="margin-top:36px"><figure><img src="images/ms-bright-bars.jpg" alt="MS bright bars" loading="lazy"><figcaption>MS bright bars</figcaption></figure><figure><img src="images/steel-plate-stack.jpg" alt="Steel plates" loading="lazy"><figcaption>Steel plates</figcaption></figure><figure><img src="images/ms-tools.jpg" alt="Tools" loading="lazy"><figcaption>Tools</figcaption></figure></div>
-  </div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-brand-lightBg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 tracking-tight">The keystonetech Standard</h2>
+                    <p class="mt-4 text-slate-600 leading-relaxed">
+                        Just like a keystonetechtech locks an arch into place, we build the core digital foundation that supports your enterprise scale. We bridge the gap between complex backend data infrastructure and intuitive front-end user experiences.
+                    </p>
+                    <div class="mt-6 space-y-3">
+                        <div class="flex items-center space-x-3 text-slate-700 font-medium">
+                            <span class="text-brand-accent">✓</span> <span>End-to-end delivery from pipeline to platform</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-700 font-medium">
+                            <span class="text-brand-accent">✓</span> <span>Enterprise-grade data security & compliance</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-700 font-medium">
+                            <span class="text-brand-accent">✓</span> <span>High-performance, modern tech stacks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 grid grid-cols-2 gap-6">
+                    <div class="border-l-2 border-brand-accent pl-4">
+                        <p class="text-3xl font-bold text-slate-900">99.9%</p>
+                        <p class="text-sm text-slate-500 mt-1">Platform Reliability</p>
+                    </div>
+                    <div class="border-l-2 border-brand-accent pl-4">
+                        <p class="text-3xl font-bold text-slate-900">Real-time</p>
+                        <p class="text-sm text-slate-500 mt-1">Analytics Streaming</p>
+                    </div>
+                    <div class="border-l-2 border-brand-accent pl-4">
+                        <p class="text-3xl font-bold text-slate-900">Scalable</p>
+                        <p class="text-sm text-slate-500 mt-1">Cloud Infrastructure</p>
+                    </div>
+                    <div class="border-l-2 border-brand-accent pl-4">
+                        <p class="text-3xl font-bold text-slate-900">Full-Stack</p>
+                        <p class="text-sm text-slate-500 mt-1">Engineering Mastery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="contact" class="contact">
-  <div class="wrap contact-grid">
-    <div>
-      <h2 class="title">For trade enquiry</h2>
-      <p class="sub">Let us know how we can support you.</p>
-      <a class="btn" href="mailto:engineeringindkab@gmail.com?subject=Trade%20enquiry">Email us</a>
-    </div>
-    <dl>
-      <dt>Address</dt>
-      <dd>Plot No. D 52/22, Near Kamgar Chowk,<br>Waluj MIDC, Chh. Sambhajinagar – 431133</dd>
-      <dt>Phone</dt>
-      <dd><a href="tel:+919822842482">9822842482</a>, <a href="tel:+918624083393">8624083393</a></dd>
-      <dt>Email</dt>
-      <dd><a href="mailto:prismengineering2026@gmail.com">prismengineering2026@gmail.com</a></dd>
-    </dl>
-  </div>
-</section>
-</main>
+    <!-- Services Section -->
+    <section id="services" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-brand-accent font-semibold text-sm tracking-wider uppercase">Our Expertise</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Core Service Offerings</h2>
+                <p class="text-slate-600 mt-3">Tailored engineering services to modernise your software platforms and unlock data capability.</p>
+            </div>
 
-<div class="ids"><span>GST No. 27AADFI4354A1ZS</span><span>MSME No. UDYAM-MH-04-0201426</span></div>
+            <div class="mt-16 grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 hover:border-brand-accent/50 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-accent rounded-lg flex items-center justify-center font-bold text-xl mb-6">01</div>
+                    <h3 class="text-xl font-bold text-slate-900">Website & Web App Development</h3>
+                    <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+                        Designing responsive, enterprise-grade web applications and platforms engineered for high throughput, security, and exceptional user interaction.
+                    </p>
+                    <ul class="mt-4 text-xs font-semibold text-slate-500 space-y-2">
+                        <li>• Custom Full-Stack Apps</li>
+                        <li>• Microservices & APIs</li>
+                        <li>• Progressive Web Apps (PWAs)</li>
+                    </ul>
+                </div>
 
-<footer>
-  <div class="wm" aria-hidden="true">Developed by Keystonetech Software Pvt Ltd</div>
-  <p>© <span id="y">2026</span> Prism Engineering. All rights reserved.</p>
-  <p class="dev">Developed by Keystonetech Software Pvt Ltd</p>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 hover:border-brand-accent/50 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-accent rounded-lg flex items-center justify-center font-bold text-xl mb-6">02</div>
+                    <h3 class="text-xl font-bold text-slate-900">Data Engineering</h3>
+                    <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+                        Constructing robust ETL/ELT pipelines, centralizing structured and unstructured data, and laying scalable foundations for cloud data platforms.
+                    </p>
+                    <ul class="mt-4 text-xs font-semibold text-slate-500 space-y-2">
+                        <li>• Data Pipeline Architecture</li>
+                        <li>• Cloud Data Warehousing</li>
+                        <li>• Real-time Streaming Pipelines</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 hover:border-brand-accent/50 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-accent rounded-lg flex items-center justify-center font-bold text-xl mb-6">03</div>
+                    <h3 class="text-xl font-bold text-slate-900">Data Analytics & Business Intelligence</h3>
+                    <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+                        Converting raw data into actionable dashboards and predictive models to guide confident, operational decisions across your enterprise.
+                    </p>
+                    <ul class="mt-4 text-xs font-semibold text-slate-500 space-y-2">
+                        <li>• Executive Dashboard Design</li>
+                        <li>• Predictive Analytics</li>
+                        <li>• BI Tool Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section (auto-moving) -->
+    <section id="tech" class="py-16 bg-slate-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-400 text-xs font-semibold tracking-widest uppercase">Technologies & Frameworks We Master</p>
+        </div>
+        <div class="marquee mt-8">
+            <!-- Edit only the cards inside this track. The copy is created automatically. -->
+            <div class="marquee-track slow" data-marquee>
+                <span class="shrink-0 mr-16 text-slate-400 font-semibold text-lg whitespace-nowrap">React / Next.js</span>
+                <span class="shrink-0 mr-16 text-slate-400 font-semibold text-lg whitespace-nowrap">Node.js</span>
+                <span class="shrink-0 mr-16 text-slate-400 font-semibold text-lg whitespace-nowrap">Python</span>
+                <span class="shrink-0 mr-16 text-slate-400 font-semibold text-lg whitespace-nowrap">Snowflake</span>
+                <span class="shrink-0 mr-16 text-slate-400 font-semibold text-lg whitespace-nowrap">Apache Spark</span>
+                <span class="shrink-0 mr-16 text-slate-400 font-semibold text-lg whitespace-nowrap">AWS / Azure</span>
+                <span class="shrink-0 mr-16 text-slate-400 font-semibold text-lg whitespace-nowrap">PostgreSQL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Feedback Section (auto-moving) -->
+    <section id="clients" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-brand-accent font-semibold text-sm tracking-wider uppercase">Client Success</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">What Our Clients Say</h2>
+            <p class="text-slate-600 mt-3 max-w-2xl mx-auto">Feedback from the teams we have built platforms and data solutions for.</p>
+        </div>
+
+        <!-- Row 1: feedback cards, moving left -->
+        <div class="marquee mt-14">
+            <!-- Edit only the cards inside this track. The copy is created automatically. -->
+            <div class="marquee-track" data-marquee>
+                <div class="w-80 md:w-96 shrink-0 mr-6 bg-brand-lightBg border border-slate-200 rounded-xl p-6 text-left">
+                    <p class="text-slate-600 text-sm leading-relaxed">"The team has demonstrated exceptional professionalism and expertise in delivering IT services. They have successfully handled complex requirements with efficiency and consistently maintained high standards of delivery. We appreciate their commitment and look forward to continued collaboration."</p>
+                    <div class="mt-5 border-t border-slate-200 pt-4">
+                        <p class="font-bold text-slate-900 text-sm">Pradeep G</p>
+                        <p class="text-xs text-slate-500"> Technical Principal Engineer, KloudOcean IT Services and Solutions Pvt Ltd</p>
+                    </div>
+                </div>
+                <div class="w-80 md:w-96 shrink-0 mr-6 bg-brand-lightBg border border-slate-200 rounded-xl p-6 text-left">
+                    <p class="text-slate-600 text-sm leading-relaxed">"They transformed our vision into a functional, user-friendly website with great attention to detail. Their ability to understand our business needs and deliver the right solution made the entire experience seamless."</p>
+                    <div class="mt-5 border-t border-slate-200 pt-4">
+                        <p class="font-bold text-slate-900 text-sm">Uday Ladda</p>
+                        <p class="text-xs text-slate-500">Managing Director, Prism Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: client names, moving right -->
+        <div class="max-w-7xl mx-auto px-6 text-center mt-16">
+            <p class="text-slate-400 text-xs font-semibold tracking-widest uppercase">Our Clients</p>
+        </div>
+        <div class="marquee mt-6">
+            <!-- Replace "Client Company" with real client names, or swap each span for an <img> logo. -->
+            <div class="marquee-track reverse slow" data-marquee>
+                <span class="shrink-0 mr-4 px-6 py-3 rounded-full border border-slate-200 bg-brand-lightBg text-slate-600 font-semibold text-sm whitespace-nowrap">PRISM ENGINEERING</span>
+                <span class="shrink-0 mr-4 px-6 py-3 rounded-full border border-slate-200 bg-brand-lightBg text-slate-600 font-semibold text-sm whitespace-nowrap">KloudOcean IT Services and Solutions Pvt Ltd</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-brand-lightBg">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+            <div>
+                <span class="text-brand-accent font-semibold text-sm tracking-wider uppercase">Contact Us</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Let's Discuss Your Project</h2>
+                <p class="text-slate-600 mt-3">Let us know how we can support you.</p>
+                <a href="mailto:info@thektsoftware.com?subject=Project%20enquiry" class="inline-flex mt-6 bg-brand-accent text-white px-7 py-3.5 rounded-lg text-sm font-semibold hover:bg-brand-accentHover transition shadow-sm">Email us</a>
+            </div>
+
+            <dl class="space-y-6">
+                <div>
+                    <dt class="font-bold text-brand-accent">Address</dt>
+                    <dd class="text-slate-700 mt-1">Flat No. T4-1608, VTP Beaumonde Nation,<br>Manjari Bk, Haveli, Pune,<br>Maharashtra, India – 412307</dd>
+                </div>
+                <div>
+                    <dt class="font-bold text-brand-accent">Phone</dt>
+                    <dd class="mt-1"><a href="tel:+919545699831" class="text-slate-700 hover:text-brand-accent transition">9545699831</a></dd>
+                </div>
+                <div>
+                    <dt class="font-bold text-brand-accent">Email</dt>
+                    <dd class="mt-1"><a href="mailto:info@thektsoftware.com" class="text-slate-700 hover:text-brand-accent transition">info@thektsoftware.com</a></dd>
+                </div>
+            </dl>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <span class="text-xl font-bold text-white tracking-tight">keystonetech<span class="text-brand-accent">.</span></span>
+                <p class="text-xs text-slate-500 mt-1">keystonetech Software Private Limited</p>
+            </div>
+            <p class="text-xs text-slate-500">&copy; 2026 keystonetech Software Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Makes each moving strip loop seamlessly: copies the items once, so you only edit one set -->
+    <script>
+        (function () {
+            var DEFAULT_SPEED = 50; // pixels per second; larger = faster
+
+            function build(track) {
+                // remove old copies (used when the window is resized)
+                track.querySelectorAll('[data-clone]').forEach(function (n) { n.remove(); });
+
+                var originals = Array.from(track.children);
+                var setWidth = track.scrollWidth;              // width of one full set of items
+                var viewWidth = track.parentElement.offsetWidth;
+                if (!setWidth) return;
+
+                // add enough copies so the strip is always wider than the screen
+                var copies = Math.ceil(viewWidth / setWidth) + 1;
+                for (var i = 0; i < copies; i++) {
+                    originals.forEach(function (item) {
+                        var c = item.cloneNode(true);
+                        c.setAttribute('aria-hidden', 'true');
+                        c.setAttribute('data-clone', '');
+                        track.appendChild(c);
+                    });
+                }
+
+                var speed = parseFloat(track.getAttribute('data-speed')) || DEFAULT_SPEED;
+                track.style.setProperty('--shift', setWidth + 'px');
+                track.style.animationDuration = (setWidth / speed) + 's';
+            }
+
+            function buildAll() {
+                document.querySelectorAll('[data-marquee]').forEach(build);
+            }
+
+            window.addEventListener('load', buildAll);
+            var t;
+            window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(buildAll, 200); });
+        })();
+    </script>
+
 </body>
 </html>
